@@ -10,8 +10,8 @@ body {
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 80px auto 80px;
-  background-color: #282f33;
+  grid-template-rows: 80px auto 60px;
+  background-color: #161515;
 }
 
 .container > div {
@@ -33,7 +33,7 @@ body {
   margin: 10px 20px;
   width: 30%;
 }
-.logo > img {
+.logo > a > img {
   height: 100%;
 }
 
@@ -42,7 +42,10 @@ body {
   width: 70%;
   justify-content: space-around;
   align-items: center;
-  font-size: 22px;
+  font-size: 24px;
+}
+.header-items > div {
+  cursor: pointer;
 }
 
 .background {
@@ -52,6 +55,8 @@ body {
   background-size: cover;
   background-position: center;
   opacity: 0.6;
+  animation-duration: 2s;
+  animation-name: slidein;
 }
 
 .content {
@@ -73,6 +78,52 @@ body {
 }
 
 .footer-details {
-  font-size: 18px;
+  font-size: 20px;
   margin-right: 20px;
+}
+.footer-details > a {
+  color: white;
+  text-decoration: none;
+}
+
+@keyframes slidein {
+  from {
+    margin-top: 100%;
+  }
+  to {
+    margin-bottom: 0%;
+  }
+}
+
+/* CSS for Menus */
+.lunch-menu {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #b13537;
+  font-family: "Sue Ellen Francisco", cursive;
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar > .title {
+  font-size: 26px;
+}
+.sidebar > hr {
+  width: 80%;
+  border: 0;
+  height: 1px;
+  background: white;
+}
+
+.menu {
+  width: 80%;
+  background-color: #d3ccb1;
 }

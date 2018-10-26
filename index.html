@@ -6,30 +6,32 @@
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
     <title>Xiao Loong</title>
   </head>
   <body>
     <div class="container">
       <div class="header">
         <div class="logo">
-          <img src="images/xl-logo.png" alt="xiao loong" />
+          <a href="index.html"><img src="images/xl-logo.png" alt="xiao loong" /></a>
         </div>
         <div class="header-items">
-          <div class="lunch-menu">
+          <div id="lunch-menu">
             Lunch Menu
           </div>
-          <div class="dinner-menu">
+          <div id="dinner-menu">
             Dinner Menu
           </div>
-          <div class="contact-us">
+          <div id="contact">
             Hours &amp; Location
           </div>
-          <div class="about-us">
+          <div id="about">
             About Us
           </div>
         </div>
       </div>
-      <div class="content">
+      <div class="content" id="content">
         <div class="background" /></div>
       </div>
       <div class="footer">
@@ -45,7 +47,11 @@
           </a>
         </div>
         <div class="footer-details">
-          250 West Portal Avenue, San Francisco, CA 94127 &#8226; 415-753-5678
+          <a href="https://www.google.com/maps/search/?api=1&query=250%20West%20Portal%20Avenue%20San%20Francisco%20California%2094127" target="_blank" rel="noopener">
+            250 West Portal Avenue, San Francisco, CA 94127
+          </a>
+          &#8226;
+          <a href="tel:+1-415-753-5678">415-753-5678</a>
         </div>
       </div>
     </div>
