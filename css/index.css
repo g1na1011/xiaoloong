@@ -1,0 +1,78 @@
+html,
+body {
+  background-color: #282f33;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 80px auto 80px;
+  background-color: #282f33;
+}
+
+.container > div {
+  color: white;
+}
+
+.header,
+.footer {
+  grid-column: 1 / -1;
+  font-family: "Sue Ellen Francisco", cursive;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  margin: 10px 20px;
+  width: 30%;
+}
+.logo > img {
+  height: 100%;
+}
+
+.header-items {
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 22px;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+}
+
+.content {
+  grid-column: 1 / -1;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.social-icons > a {
+  font-size: 22px;
+  margin-right: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-details {
+  font-size: 18px;
+  margin-right: 20px;
+}
