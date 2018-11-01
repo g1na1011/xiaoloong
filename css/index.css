@@ -6,6 +6,11 @@ body {
   margin: 0px;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 .container {
   height: 100vh;
   display: grid;
@@ -73,17 +78,11 @@ body {
 .social-icons > a {
   font-size: 22px;
   margin-right: 10px;
-  color: white;
-  text-decoration: none;
 }
 
 .footer-details {
   font-size: 20px;
   margin-right: 20px;
-}
-.footer-details > a {
-  color: white;
-  text-decoration: none;
 }
 
 @keyframes slidein {
@@ -122,8 +121,22 @@ body {
   height: 1px;
   background: white;
 }
+.sidebar > .item {
+  cursor: pointer;
+}
+.sidebar > .item > a:hover {
+  color: #161515;
+}
 
 .menu {
   width: 80%;
   background-color: #d3ccb1;
+  color: #161515;
+}
+
+.menu > .notice {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px;
 }

@@ -4,7 +4,6 @@
 // }
 
 $(document).ready(function() {
-  console.log("HELLO?!");
   $("#lunch-menu").on("click", function() {
     $("#content").load("../lunch-menu.html");
   });
