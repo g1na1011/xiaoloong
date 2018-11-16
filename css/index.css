@@ -99,7 +99,8 @@ a {
 }
 
 /* CSS for Menus */
-.lunch-menu {
+.lunch-menu,
+.dinner-menu {
   display: flex;
   flex-direction: row;
   height: 100%;
@@ -110,7 +111,7 @@ a {
   width: 20%;
   background-color: #b13537;
   font-family: "Sue Ellen Francisco", cursive;
-  font-size: 22px;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -118,13 +119,12 @@ a {
   overflow: auto;
 }
 .sidebar-title {
-  font-size: 26px;
+  font-size: 24px;
 }
-.sidebar > hr {
+.sidebar-line {
   width: 80%;
-  border: 0;
-  height: 1px;
-  background: white;
+  border: 1px white solid;
+  margin-bottom: 6px;
 }
 .sidebar-item {
   cursor: pointer;
@@ -135,7 +135,7 @@ a {
 
 .menu {
   width: 80%;
-  background-color: #d3ccb1;
+  background-color: #c4beb0;
   color: #161515;
   overflow: auto;
 }
@@ -150,7 +150,7 @@ a {
 }
 .menu-title > a {
   font-family: "Sue Ellen Francisco", cursive;
-  font-size: 22px;
+  font-size: 20px;
   color: #161515;
   text-decoration: none;
 }
