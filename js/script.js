@@ -9,3 +9,9 @@ $(document).ready(function() {
     $("#content").load("../dinner-menu.html");
   });
 });
+
+$(document).ready(function() {
+  $("#about").on("click", function() {
+    $("#content").load("../about-us.html");
+  });
+});
