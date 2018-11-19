@@ -193,6 +193,74 @@ a {
   overflow: auto;
 }
 
+.contact {
+  background-color: #c4beb0;
+  color: #161515;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-container > h1,
+.hour-label,
+.contact-details > span {
+  font-family: "Sue Ellen Francisco", cursive;
+}
+.contact-container > h1 {
+  font-size: 36px;
+  margin-bottom: 0;
+}
+.hour-label,
+.contact-details > span {
+  font-size: 30px;
+}
+.hours-table-container,
+.hours-table,
+.hours-row {
+  display: flex;
+}
+.hours-table-container {
+  width: 600px;
+}
+.hours-table-container,
+.hours-table {
+  flex-direction: column;
+}
+.hours-table,
+.address {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+.hours-row > div {
+  width: 33%;
+  display: flex;
+  justify-content: space-around;
+}
+.current-day {
+  background-color: #b13537;
+  color: white;
+}
+.map-container {
+  margin-bottom: 40px;
+}
+.address {
+  margin-bottom: 20px;
+  display: flex;
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+.contact-details > a {
+  color: #b13537;
+}
+
 /* Animations */
 @keyframes slidedown {
   100% {
