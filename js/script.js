@@ -1,14 +1,20 @@
 $(document).ready(function() {
-  $("#lunch-menu").on("click", function() {
-    $("#content").load("../lunch-menu.html");
+  $("#lunch-menu, #lunch-menu-mobile").on("click", function() {
+    $("#content").load("../lunch-menu.html", function() {
+      $(".header-items-mobile-nav").hide();
+    });
   });
 
-  $("#dinner-menu").on("click", function() {
-    $("#content").load("../dinner-menu.html");
+  $("#dinner-menu, #dinner-menu-mobile").on("click", function() {
+    $("#content").load("../dinner-menu.html", function() {
+      $(".header-items-mobile-nav").hide();
+    });
   });
 
-  $("#contact").on("click", function() {
+  $("#contact, #contact-mobile").on("click", function() {
     $("#content").load("../contact.html", function() {
+      $(".header-items-mobile-nav").hide();
+
       const date = new Date();
       const day = date.getDay();
 
@@ -47,7 +53,20 @@ $(document).ready(function() {
     });
   });
 
-  $("#about").on("click", function() {
-    $("#content").load("../about-us.html");
+  $("#about, #about-mobile").on("click", function() {
+    $("#content").load("../about-us.html", function() {
+      $(".header-items-mobile-nav").hide();
+    });
+  });
+
+  $(window).on("resize", function() {
+    const width = $(window).width();
+    if (width > 767) {
+      $(".header-items-mobile-nav").hide();
+    }
   });
 });
+
+function showMobileNav() {
+  $(".header-items-mobile-nav").toggle();
+}

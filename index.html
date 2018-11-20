@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="shortcut icon" type="images/ico" href="images/favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Roboto|Roboto+Condensed|Sue+Ellen+Francisco">
@@ -17,18 +18,19 @@
           <a href="/"><img src="images/xl-logo.png" alt="xiao loong" /></a>
         </div>
         <div class="header-items">
-          <div id="lunch-menu">
-            Lunch Menu
-          </div>
-          <div id="dinner-menu">
-            Dinner Menu
-          </div>
-          <div id="contact">
-            Hours &amp; Location
-          </div>
-          <div id="about">
-            About Us
-          </div>
+          <div id="lunch-menu">Lunch Menu</div>
+          <div id="dinner-menu">Dinner Menu</div>
+          <div id="contact">Hours &amp; Location</div>
+          <div id="about">About Us</div>
+        </div>
+        <div class="header-items-mobile" onClick="showMobileNav()">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <div class="header-items-mobile-nav">
+          <div id="lunch-menu-mobile">Lunch Menu</div>
+          <div id="dinner-menu-mobile">Dinner Menu</div>
+          <div id="contact-mobile">Hours &amp; Location</div>
+          <div id="about-mobile">About Us</div>
         </div>
       </div>
       <div class="content" id="content">

@@ -53,6 +53,9 @@ a {
 .header-items > div {
   cursor: pointer;
 }
+.header-items-mobile {
+  display: none;
+}
 
 .background {
   width: 100%;
@@ -271,5 +274,61 @@ a {
 @keyframes slideright {
   100% {
     transform: translateX(0%);
+  }
+}
+
+/* CSS for Mobile */
+@media (min-width: 320px) and (max-width: 767px) {
+  .container {
+    grid-template-rows: 60px auto 80px;
+  }
+
+  .header-items {
+    display: none;
+  }
+  .header-items-mobile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+  }
+  .logo > a > img {
+    height: 40px;
+    width: 40px;
+  }
+  .fa-bars {
+    font-size: 20px;
+  }
+  .header-items-mobile-nav {
+    display: none;
+    position: absolute;
+    margin-top: 50px;
+    right: 0;
+    text-align: right;
+    width: 40%;
+    background-color: #161515;
+    z-index: 1;
+    padding: 0 20px 10px 0;
+    font-size: 18px;
+    animation: slidedown 1s forwards;
+    transform: translateY(-20%);
+  }
+
+  .background {
+    animation: none;
+    transform: translateY(0%);
+  }
+
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footer-details,
+  .social-icons {
+    margin: 0;
+  }
+  .footer-details,
+  .social-icons > a {
+    font-size: 16px;
   }
 }
