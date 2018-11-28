@@ -63,10 +63,24 @@ $(document).ready(function() {
     const width = $(window).width();
     if (width > 767) {
       $(".header-items-mobile-nav").hide();
+      $(".sidebar-items-mobile").hide();
     }
   });
 });
 
+window.addEventListener("click", function(e) {
+  if (!$(e.target).closest(".header-items-mobile").length) {
+    $(".header-items-mobile-nav").hide();
+  }
+  if (!$(e.target).closest(".sidebar-mobile").length) {
+    $(".sidebar-items-mobile").hide();
+  }
+});
+
 function showMobileNav() {
   $(".header-items-mobile-nav").toggle();
+}
+
+function showMobileSidebarNav() {
+  $(".sidebar-items-mobile").toggle();
 }

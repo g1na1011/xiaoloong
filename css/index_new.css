@@ -53,14 +53,15 @@ a {
 .header-items > div {
   cursor: pointer;
 }
-.header-items-mobile {
+.header-items-mobile,
+.header-items-mobile-nav {
   display: none;
 }
 
 .background {
   width: 100%;
   height: 100%;
-  background-image: url("../images/banner.jpg");
+  background-image: url("../images/banner_1a.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.8;
@@ -112,6 +113,10 @@ a {
   justify-content: center;
   align-items: center;
   overflow: auto;
+}
+.sidebar-mobile,
+.sidebar-items-mobile {
+  display: none;
 }
 .sidebar-title {
   font-size: 24px;
@@ -242,13 +247,23 @@ a {
   width: 33%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .current-day {
   background-color: #b13537;
   color: white;
 }
 .map-container {
-  margin-bottom: 40px;
+  width: 800px;
+  height: 0;
+  padding-bottom: 40px;
+}
+.google-map {
+  border: 0;
+  height: 450px;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 .address {
   margin-bottom: 20px;
@@ -278,9 +293,9 @@ a {
 }
 
 /* CSS for Mobile */
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .container {
-    grid-template-rows: 60px auto 80px;
+    grid-template-rows: 80px auto 80px;
   }
 
   .header-items {
@@ -292,9 +307,12 @@ a {
     align-items: center;
     padding-right: 20px;
   }
+  .logo {
+    margin: 15px 20px;
+  }
   .logo > a > img {
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
   }
   .fa-bars {
     font-size: 20px;
@@ -309,14 +327,12 @@ a {
     background-color: #161515;
     z-index: 1;
     padding: 0 20px 10px 0;
-    font-size: 18px;
-    animation: slidedown 1s forwards;
-    transform: translateY(-20%);
+    font-size: 20px;
   }
 
   .background {
     animation: none;
-    transform: translateY(0%);
+    transform: none;
   }
 
   .footer {
@@ -329,6 +345,77 @@ a {
   }
   .footer-details,
   .social-icons > a {
-    font-size: 16px;
+    font-size: 18px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+  .sidebar-mobile,
+  .sidebar-items-mobile {
+    background-color: #b13537;
+    font-family: "Sue Ellen Francisco", cursive;
+  }
+  .sidebar-mobile {
+    display: block;
+    font-size: 22px;
+    padding: 2px 20px;
+  }
+  .sidebar-items-mobile {
+    display: none;
+    font-size: 20px;
+    padding: 0 40px;
+  }
+  .fa-angle-double-down {
+    margin-left: 6px;
+  }
+  .menu {
+    width: 100%;
+  }
+  .menu-item {
+    display: flex;
+    grid-template-columns: none;
+    flex-direction: column;
+  }
+  .lunch-menu,
+  .dinner-menu {
+    flex-direction: column;
+  }
+
+  .hours-table-container,
+  .map-container {
+    width: 100%;
+  }
+  .map-container {
+    margin-bottom: 0;
+  }
+  .contact-container > h1 {
+    font-size: 32px;
+    margin-bottom: 0;
+  }
+  .hour-label,
+  .contact-details > span {
+    font-size: 28px;
+  }
+  .hours-table,
+  .address {
+    font-size: 14px;
+  }
+  .address {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-description {
+    flex-direction: column;
+  }
+  .about-text {
+    font-size: 14px;
+    width: 90%;
+  }
+  .about-text,
+  .dragon-char {
+    transform: none;
+    animation: none;
   }
 }
